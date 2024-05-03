@@ -11,11 +11,11 @@ BlogPost.init({
         allowNull: false,
         autoIncrement: true,
     },
-    blog_text: {
+    blog_title: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    blog_title: {
+    blog_text: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -26,12 +26,14 @@ BlogPost.init({
             key: "id"
         },
     },
-
+},
+{
     sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'blogpost',
-})
+}
+)
 
 module.exports = BlogPost;

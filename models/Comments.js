@@ -23,12 +23,15 @@ Comments.init({
             key: "id",
         }
     },
-    sequelize,
-    timestamps: true,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'comments',
-})
+},
+    {
+        sequelize,
+        timestamps: true,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'comments',
+    }
+);
 
 
 
