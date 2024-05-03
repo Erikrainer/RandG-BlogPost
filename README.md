@@ -6,6 +6,10 @@
 
 My task this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. I’ll build this site completely from scratch and deploy it to Render.
 
+ER Diagram:
+
+![RandG-BlogPost](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/10e2fa27-d988-4d46-9db9-943c42afe0e1)
+
 ## Table of Contents 🗒
 
 * [Installations](#installations-💻)
