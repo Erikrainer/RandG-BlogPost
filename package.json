@@ -1,0 +1,23 @@
+{
+  "name": "randg-blogpost",
+  "version": "1.0.0",
+  "description": "![Github License](https://img.shields.io/badge/License-MIT-yellow.svg)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3"
+  }
+}
