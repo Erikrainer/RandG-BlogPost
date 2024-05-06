@@ -5,15 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RandG Blog</title>
-  <link rel="stylesheet" href="../../public/assets/css/jass.css">
-  <link rel="stylesheet" href="../../public/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/jass.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
   <header>
     <h1>Welcome to the RandG Blog</h1>
-  </header>
-  <nav>
+    <nav class="navLinks">
     <a href="/">Home</a>
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
@@ -21,13 +20,14 @@
     <a href="/login">Login</a>
     {{/if}}
   </nav>
+  </header>
   <main>
     <div class="blog">
       {{{body}}}
     </div>
   </main>
   {{#if loggedIn}}
-  <script src="../../public/assets/js/logout.js"></script>
+  <script src="/assets/js/logout.js"></script>
   {{/if}}
 </body>
 

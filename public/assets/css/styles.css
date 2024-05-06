@@ -1,10 +1,9 @@
 :root {
 
-    --background-main:  #FAF0CA;
+    --background-main:  white;
     --main-color:#000000;
-    --background-secondary: #0D3B66;
-    --secondary-color: #860021;
-    --image-background: #860021;
+    --background-secondary: #757a79;
+    --background-posts: #bbe9db;
 }
 
 a{
@@ -15,10 +14,11 @@ a{
 }
 
 body {
-    background-color: red;
+
     margin: 0;
     padding: 0;
-    /* background-color: var(--background-main); */
+    background-color: var(--background-main);
+
 }
 
 header {
@@ -30,5 +30,67 @@ header {
     color: var(--main-color);
     background-color: var(--background-secondary);
     border-bottom: 4px solid black;
+    font-weight: 600;
+    color: var(--main-color);
+    text-shadow: 0px 0px 5px #00BFFF, 0px 0px 10px #00BFFF, 0px 0px 10px #00BFFF,
+      0px 0px 20px #00BFFF;
 
 }
+
+header h1 {
+
+    margin: 2rem 1rem;
+    font-size: 250%;
+
+}
+
+.navLinks {
+
+    margin:  1.5rem 3rem;
+    padding: 1rem;
+    font-size: 200%;
+    word-spacing:4rem;
+}
+/* 
+.blogTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--main-color);
+    background-color: var(--background-posts);
+    border-bottom: 2px solid black;
+} */
+
+.blogPost {
+    border: 1px solid #ccc; /* Add border around the box */
+    padding: 20px; /* Add padding inside the box */
+    margin-bottom: 20px; /* Add margin between each blog post */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: #f9f9f9; /* Add background color */
+}
+
+.blogHeader {
+    padding: 10px; /* Add padding to the header */
+    border-bottom: 1px solid #ccc; /* Add border between title and user/date */
+    margin-bottom: 10px; /* Add margin below header */
+    background-color: var(--background-posts); /* Add background color to the header */
+    display: flex; /* Use flexbox for header layout */
+    justify-content: space-between; /* Space out title and user/date */
+}
+
+.blogText {
+    margin-top: 10px; /* Add margin above text */
+}
+
+.commentSection {
+    margin-top: 10px; /* Add margin above comment section */
+}
+
+.comments {
+    border-top: 1px solid #ccc; /* Add border between comments */
+    padding-top: 10px; /* Add padding above each comment */
+    margin-top: 10px; /* Add margin between comments */
+    color: #777; /* Adjust comment text color */
+}
+
