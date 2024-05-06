@@ -1,0 +1,34 @@
+<div class="blogpost-container">
+    <div class="pageTitle">
+        <h2>
+            RandG BlogPost
+        </h2>
+    </div>
+    {{#each blogposts as |blogpost|}}
+    <div class="blogPost">
+        <h2 class="blogTitle">
+            {{blogpost.title}}.
+            </h2>
+        <p class="blogText">
+            {{blogpost.text}}
+        </p>
+        <p></p>
+    </div>
+    <div class="blogUser">
+        <p>
+            Posted by: {{blogpost.user_username}} on {{format_date blogpost.createdAt}}
+        </p>
+    </div>
+    <div class="">
+        {{#if blogpost.comments.length}}{{else}} 💬: No comments {{/if}}
+    </div>
+    <div class="commentSection">
+        <h3>💬Comments:</h3>
+        {{#each blogpost.comments as |comment|}}
+        <div class="comments">
+            <p>{{comment.comment_text}} by: {{comment.user_username}} on {{format_date comment.createdAt}}</p>
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>

@@ -19,11 +19,11 @@ BlogPost.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    user_id: {
-        type: DataTypes.INTEGER,
+    user_username: {
+        type: DataTypes.STRING,
         references: {
             model: "user",
-            key: "id"
+            key: "username"
         },
     },
 },

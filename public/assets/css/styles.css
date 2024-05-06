@@ -1,0 +1,34 @@
+:root {
+
+    --background-main:  #FAF0CA;
+    --main-color:#000000;
+    --background-secondary: #0D3B66;
+    --secondary-color: #860021;
+    --image-background: #860021;
+}
+
+a{
+
+    text-decoration: none;
+    color: var(--main-color);
+
+}
+
+body {
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    /* background-color: var(--background-main); */
+}
+
+header {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--main-color);
+    background-color: var(--background-secondary);
+    border-bottom: 4px solid black;
+
+}
