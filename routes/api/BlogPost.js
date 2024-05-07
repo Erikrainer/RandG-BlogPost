@@ -42,29 +42,24 @@ router.post("/create", withAuth, async (req, res ) => {
     }
 });
 
-router.put('/update/:id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
     try {
-        const post = await BlogPost.findOne({
+        const post = await BlogPost.update(
+          {
+            title: req.body.title,
+            text: req.body.text,
+          },
+          {
           where: {
            id: req.params.id
           },
-        });
-
-        if (!post) {
-            return res.status(404).json({ error: 'Post not found' });
         }
+      );
 
-        // Update the post with new title and text
-        await post.update({ 
-          title: req.body.title,
-          text: req.body.text,
-        });
-
-        // Return the updated post
         res.status(200).json(post);
     } catch (error) {
         // If an error occurs, return a 400 response
-        res.status(400).json({ error: 'Error updating post' });
+        res.status(400).json({ error: 'Error updating post' }); 
     }
 });
 
