@@ -5,6 +5,8 @@
             <div class="post">
                 <div class="post-header">
                     <h3 class="post-title">{{ blogpost.title }}</h3>
+                    <!-- Update button to redirect to edit post page -->
+                    <a href="/blogpost/edit/{{ blogpost.id }}" class="updateButton">✏️</a>
                     <p class="post-meta">Posted on {{ format_date blogpost.createdAt }}</p>
                 </div>
                 <div class="post-content">
@@ -29,7 +31,7 @@
         <h2>Create New Post</h2>
         <form class="newPost" action="/dashboard/create" method="POST">
             <input id="title" type="text" name="title" placeholder="Title">
-            <textarea id="text" name="text" placeholder="text"></textarea>
+            <textarea id="text" name="text" placeholder="Text"></textarea>
             <button type="submit" value="Submit" class="btn-create-post">Create Post</button>
         </form>
     </div>

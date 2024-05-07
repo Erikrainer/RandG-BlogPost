@@ -253,15 +253,20 @@ header h1 {
   }
   
   .post-header {
+    position: relative; /* Positioning context for absolute positioning */
     margin-bottom: 10px; /* Add margin below header */
     background-color: var(--background-posts); /* Background color for the header */
     border-top-left-radius: 5px; /* Adjust top left border radius to match container */
     border-top-right-radius: 5px; /* Adjust top right border radius to match container */
     padding: 20px; /* Add padding to the header */
-    margin: -20px -20px 0; /* Remove margin and adjust for padding */
-  }
+}
+
+.post-header-content {
+  display: inline-block; /* Ensure content is displayed in a block */
+}
   
   .post-title {
+    margin: 0;
     font-size: 24px; /* Increase font size for post title */
     margin-bottom: 5px; /* Add margin below title */
   }
@@ -287,4 +292,65 @@ header h1 {
   }
   
   
-  
+  /* Edit Icon */
+  .updateButton {
+    position: absolute; /* Position the button absolutely */
+    top: 50%; /* Align to the vertical center of the header */
+    right: 20px; /* Align to the right with some padding */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 1.5rem; /* Adjust font size */
+    color: #333; /* Set button color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Optional: Add hover effect */
+.updateButton:hover {
+    color: #000; /* Change color on hover */
+}
+
+/* Edit Form Start Here */
+
+.edit-post-container {
+  width: 80%; /* Set the width to cover 80% of the page */
+  margin: 20px auto; /* Center the container horizontally and add margin to top and bottom */
+}
+
+.edit-post-container h1 {
+  font-size: 24px; /* Set font size for heading */
+  margin-bottom: 20px; /* Add margin below heading */
+}
+
+.editPostForm {
+  display: flex;
+  flex-direction: column; /* Arrange form elements vertically */
+}
+
+.editPostForm input[type="text"],
+.editPostForm textarea {
+  margin-bottom: 20px; /* Add margin between form inputs */
+  padding: 10px; /* Add padding to form inputs */
+  font-size: 16px; /* Set font size for form inputs */
+  border: 1px solid #ccc; /* Add border to form inputs */
+  border-radius: 6px; /* Add border radius to form inputs */
+}
+
+.editPostForm textarea {
+  height: 150px; /* Set height for textarea */
+}
+
+.editPostForm button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.editPostForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+

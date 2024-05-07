@@ -15,7 +15,7 @@
     <nav class="navLinks">
       <a href="/">Home</a>
       {{#if logged_in}}
-        <a href="/dashboard">Dashboard</a>
+        <a href="/blogpost">Dashboard</a>
         <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
         <a href="/login">Login</a>
@@ -29,6 +29,8 @@
   </main>
   {{#if logged_in}}
     <script src="/assets/js/logout.js"></script>
+    <script src="/assets/js/add-post.js"></script>
+    <script src="/assets/js/edit-post.js"></script>
   {{/if}}
 </body>
 

@@ -1,0 +1,8 @@
+<div class="edit-post-container">
+    <h1 class="editTitle">Edit Post</h1>
+    <form class="editPostForm" action="/blogpost/update/{{postId}}" method="POST">
+        <input id="title" type="text" name="title" placeholder="Title" value="{{post.title}}">
+        <textarea id="text" name="text" placeholder="Text">{{post.text}}</textarea>
+        <button type="submit" class="btn-edit-post">Save Changes</button>
+    </form>
+</div>
