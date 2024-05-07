@@ -11,7 +11,7 @@ router.post("/create", withAuth, async (req,res) => {
                 blogpost_id: req.body.blogpost_id,
                 user_username: req.session.username,
             });
-            res.status(200).json(newComment);
+            res.redirect("/");
         }catch(error){
         res.status(500).json(error);
     }
