@@ -29,11 +29,6 @@ User.init({
     }
 }, {
     hooks: {
-        async beforeValidate(user) {
-            if (user.username) {
-                user.username = user.username.toLowerCase();
-            }
-        },
         async beforeCreate(newUserData) {
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
         },

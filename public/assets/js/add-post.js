@@ -8,14 +8,16 @@ async function newFormHandler(event) {
     // Get form input values
     const title = document.querySelector('#title').value;
     const text = document.querySelector('#text').value;
+    const usernameElement = document.getElementById('usernameElement');
+    const user_username = usernameElement.dataset.username;
 
-    try {
         // Send POST request to create post
-        const response = await fetch ("/dashboard/create", {
+        const response = await fetch ("/blogpost/create", {
             method: "POST",
             body: JSON.stringify({
                 title,
                 text,
+                user_username,
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -29,8 +31,6 @@ async function newFormHandler(event) {
             // If response is not successful, display error message
             alert("Failed to add post");
         }
-    } catch (error) {
-        console.error("Error adding post:", error);
-        alert("Failed to add post");
-    }
 }
+document
+document.querySelector('.newPost').addEventListener('submit', newFormHandler);

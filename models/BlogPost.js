@@ -26,13 +26,6 @@ BlogPost.init({
         },
     },
 }, {
-    hooks: {
-        async beforeValidate(blogpost) {
-            if (blogpost.user_username) {
-                blogpost.user_username = blogpost.user_username.toLowerCase();
-            }
-        },
-    },
     sequelize,
     timestamps: true,
     freezeTableName: true,

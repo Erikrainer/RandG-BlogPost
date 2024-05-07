@@ -18,20 +18,10 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-const sessionSecret = process.env.SESSION_SECRET || 'Super secret secret';
 const sess = {
-    secret: sessionSecret,
-  cookie: {
-    maxAge: 300000,
-    httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: 'strict',
-  },
+  secret: 'Super secret secret',
   resave: false,
-  saveUninitialized: false,
-  store: new SequelizeStore({
-    db: sequelize
-  })
+  saveUninitialized: true,
 };
 
 app.use(session(sess));
