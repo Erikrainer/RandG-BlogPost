@@ -4,14 +4,15 @@ const { Comments } = require("../../models");
 
 const withAuth = require("../../utils/auth");
 
-router.post("/", withAuth, async (req,res) => {
-    try{
-        const newComment = await Comments.create({
-            ...req.body,
-            username: req.session.username,
-        });
-        res.status(200).json(newComment);
-    }catch(error){
+router.post("/create", withAuth, async (req,res) => {
+        try{           
+            const newComment = await Comments.create({
+                comment_text: req.body.comment_text,
+                blogpost_id: req.body.blogpostId,
+                user_username: req.session.username,
+            });
+            res.status(200).json(newComment);
+        }catch(error){
         res.status(500).json(error);
     }
 });

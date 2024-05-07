@@ -13,7 +13,7 @@
                     <p>{{ blogpost.text }}</p>
                 </div>
                 <div class="post-comments">
-                    <h3>Comments:</h3>
+                    <h3>💬 Comments:</h3>
                     {{#if blogpost.comments.length}}
                         {{#each blogpost.comments as |comment|}}
                             <div class="comment">
@@ -21,7 +21,6 @@
                             </div>
                         {{/each}}
                     {{else}}
-                        <p>No comments yet</p>
                     {{/if}}
                 </div>
             </div>

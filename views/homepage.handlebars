@@ -2,30 +2,55 @@
     {{#each blogposts as |blogpost|}}
     <div class="blogPost">
         <div class="blogHeader">
-        <h2 class="blogTitle">
-            {{blogpost.title}}.
-        </h2>
-        <div class="blogUser">
-        <p>
-            Posted by: {{blogpost.user_username}} on {{format_date blogpost.createdAt}}
-        </p>
+            <h2 class="blogTitle">
+                {{blogpost.title}}.
+            </h2>
+            <div class="blogUser">
+                <p>
+                    Posted by: {{blogpost.user_username}} on {{format_date blogpost.createdAt}}
+                </p>
+            </div>
         </div>
-    </div>
         <p class="blogText">
             {{blogpost.text}}
         </p>
         <p></p>
-    <div class="commentTitle">
-        {{#if blogpost.comments.length}}{{else}} 💬: No comments {{/if}}
-    </div>
-    <div class="commentSection">
-        <h3>💬Comments:</h3>
-        {{#each blogpost.comments as |comment|}}
-        <div class="comments">
-            <p>{{comment.comment_text}} by: {{comment.user_username}} on {{format_date comment.createdAt}}</p>
+        <div class="commentTitle">
+            {{#if blogpost.comments.length}}{{else}} 💬: No comments {{/if}}
         </div>
-        {{/each}}
-    </div>
+        {{#if blogpost.comments.length}}
+            <div class="commentSection">
+                <h3>💬 Comments:</h3>
+                {{#each blogpost.comments as |comment|}}
+                <div class="comments">
+                    <p>{{comment.comment_text}} by: {{comment.user_username}} on {{format_date comment.createdAt}}</p>
+                </div>
+                {{/each}}
+            </div>
+        {{/if}}
+        <div class="add-comment-button">
+            <button onclick="toggleCommentForm('{{blogpost.id}}')">Add Comment</button>
+        </div>
+        <div class="add-comment-form" id="commentForm_{{blogpost.id}}" style="display: none;">
+            <form action="/comments/create" method="POST">
+            <input type="hidden" name="blogpostId" value="{{blogpost.id}}">
+                <textarea name="comment_text" placeholder="Your comment"></textarea>
+                <button type="submit">Add Comment</button>
+            </form>
+        </div>
     </div>
     {{/each}}
 </div>
+
+<script>
+    function toggleCommentForm(blogpostId) {
+        var commentForm = document.getElementById("commentForm_" + blogpostId);
+        if (commentForm.style.display === "none" || commentForm.style.display === "") {
+            commentForm.style.display = "block";
+        } else {
+            commentForm.style.display = "none";
+        }
+    }
+</script>
+<script src="/assets/js/add-comment.js"></script>
+

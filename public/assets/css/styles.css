@@ -250,54 +250,54 @@ header h1 {
     padding: 20px; /* Add padding inside the post */
     margin-bottom: 20px; /* Add margin between each post */
     background-color: #f9f9f9; /* Add background color to the post */
-  }
+    position: relative; /* Ensure position is relative for absolute positioning */
+}
   
-  .post-header {
-    position: relative; /* Positioning context for absolute positioning */
-    margin-bottom: 10px; /* Add margin below header */
-    background-color: var(--background-posts); /* Background color for the header */
-    border-top-left-radius: 5px; /* Adjust top left border radius to match container */
-    border-top-right-radius: 5px; /* Adjust top right border radius to match container */
-    padding: 20px; /* Add padding to the header */
+.post-header {
+  margin-bottom: 10px; /* Add margin below header */
+  background-color: #f0f0f0; /* Background color for the header */
+  border-top-left-radius: 8px; /* Adjust top left border radius */
+  border-top-right-radius: 8px; /* Adjust top right border radius */
+  padding: 10px 20px; /* Add padding to the header */
 }
 
 .post-header-content {
   display: inline-block; /* Ensure content is displayed in a block */
 }
   
-  .post-title {
-    margin: 0;
-    font-size: 24px; /* Increase font size for post title */
-    margin-bottom: 5px; /* Add margin below title */
-  }
+.post-title {
+  margin: 0;
+  font-size: 24px; /* Increase font size for post title */
+  margin-bottom: 5px; /* Add margin below title */
+}
   
-  .post-meta {
-    font-size: 14px; /* Decrease font size for meta information */
-    color: #777; /* Adjust color for meta information */
-  }
+.post-meta {
+  font-size: 14px; /* Decrease font size for meta information */
+  color: #777; /* Adjust color for meta information */
+}
   
-  .post-content {
-    margin-bottom: 10px; /* Add margin below post content */
-  }
+.post-content {
+  margin-bottom: 10px; /* Add margin below post content */
+}
   
-  .post-comments {
-    margin-top: 10px; /* Add margin above comment section */
-  }
+.post-comments {
+  margin-top: 10px; /* Add margin above comment section */
+}
   
-  .comment {
-    border-top: 1px solid #ccc; /* Add border between comments */
-    padding-top: 10px; /* Add padding above each comment */
-    margin-top: 10px; /* Add margin between comments */
-    color: #777; /* Adjust comment text color */
-  }
+
+.comment {
+  border-top: 1px solid #ccc; /* Add border between comments */
+  padding-top: 10px; /* Add padding above each comment */
+  margin-top: 10px; /* Add margin between comments */
+  color: #777; /* Adjust comment text color */
+}
   
   
   /* Edit Icon */
   .updateButton {
     position: absolute; /* Position the button absolutely */
-    top: 50%; /* Align to the vertical center of the header */
-    right: 20px; /* Align to the right with some padding */
-    transform: translateY(-50%); /* Center vertically */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
     font-size: 1.5rem; /* Adjust font size */
     color: #333; /* Set button color */
     text-decoration: none; /* Remove underline */
@@ -305,7 +305,7 @@ header h1 {
 
 /* Optional: Add hover effect */
 .updateButton:hover {
-    color: #000; /* Change color on hover */
+  color: #000; /* Change color on hover */
 }
 
 /* Edit Form Start Here */
@@ -353,4 +353,53 @@ header h1 {
 .editPostForm button[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+/* Comment Button Styles */
+
+/* Add Comment Button Style */
+.add-comment-button {
+  margin-top: 10px; /* Add margin above the button */
+  text-align: center; /* Center align the button */
+}
+
+.add-comment-button button {
+  background-color: #007bff; /* Set background color */
+  color: #fff; /* Set text color */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 6px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 16px; /* Set font size */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 150px; /* Set width */
+}
+
+.add-comment-button button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+
+}
+
+/* Form new comment styles */
+
+/* Add Comment Button Style Inside Form */
+.add-comment-form button[type="submit"] {
+  background-color: #007bff; /* Set background color */
+  color: #fff; /* Set text color */
+  padding: 4px 8px; /* Reduce padding */
+  border: none; /* Remove border */
+  border-radius: 3px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 11px; /* Reduce font size */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: calc(100% - 20px); /* Set width */
+  margin-top: 10px; /* Add margin at the top */
+}
+
+.add-comment-form button[type="submit"]:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+
+
+/* Style form new comment */
 
