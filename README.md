@@ -36,8 +36,6 @@ npm install
 ```
 ![Screenshot 2024-05-07 100525](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/a0bc763b-8d26-4331-8af2-1a6e52e16bd6)
 
-![Screenshot 2024-05-07 100536](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/3ffd3531-aff3-4740-9e3b-f27d604036de)
-
 ![Screenshot 2024-05-07 100549](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/a965b3d8-20d9-4403-9f63-6fd9caceebe9)
 
 ![Screenshot 2024-05-07 100557](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/9ecc9433-0ddd-40f2-896f-c22c12d3b19f)
@@ -58,6 +56,10 @@ npm run seed
 ```
 npm run start
 ```
+
+4.You need to create an account to use the Page
+
+![Screenshot 2024-05-07 100536](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/3ffd3531-aff3-4740-9e3b-f27d604036de)
 
 ## License 📛 
 
