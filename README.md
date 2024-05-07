@@ -8,7 +8,7 @@ My task this week is to build a CMS-style blog site similar to a Wordpress site,
 
 ER Diagram:
 
-![RandG-BlogPost](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/10e2fa27-d988-4d46-9db9-943c42afe0e1)
+![RandG-BlogPost ER](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/d7aa8cad-9fc6-438f-8d25-7edc04111aba)
 
 ## Table of Contents 🗒
 
