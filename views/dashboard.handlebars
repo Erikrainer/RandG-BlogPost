@@ -1,0 +1,36 @@
+<div class="blogpost-container">
+    <h1>Welcome to {{username}} Dashboard</h1>
+    <div class="dashboard-container">
+        {{#each blogposts as |blogpost|}}
+            <div class="post">
+                <div class="post-header">
+                    <h3 class="post-title">{{ blogpost.title }}</h3>
+                    <p class="post-meta">Posted on {{ format_date blogpost.createdAt }}</p>
+                </div>
+                <div class="post-content">
+                    <p>{{ blogpost.text }}</p>
+                </div>
+                <div class="post-comments">
+                    <h3>Comments:</h3>
+                    {{#if blogpost.comments.length}}
+                        {{#each blogpost.comments as |comment|}}
+                            <div class="comment">
+                                <p>{{ comment.comment_text }} Posted on {{ format_date comment.createdAt }}</p>
+                            </div>
+                        {{/each}}
+                    {{else}}
+                        <p>No comments yet</p>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <div class="create-post-form">
+        <h2>Create New Post</h2>
+        <form class="newPost" action="/dashboard/create" method="POST">
+            <input id="title" type="text" name="title" placeholder="Title">
+            <textarea id="text" name="text" placeholder="text"></textarea>
+            <button type="submit" value="Submit" class="btn-create-post">Create Post</button>
+        </form>
+    </div>
+</div>

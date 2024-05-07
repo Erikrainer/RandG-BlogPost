@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-
 const sequelize = require("../config/connection");
 
 class BlogPost extends Model {}
@@ -26,14 +25,19 @@ BlogPost.init({
             key: "username"
         },
     },
-},
-{
+}, {
+    hooks: {
+        async beforeValidate(blogpost) {
+            if (blogpost.user_username) {
+                blogpost.user_username = blogpost.user_username.toLowerCase();
+            }
+        },
+    },
     sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: 'blogpost',
-}
-)
+});
 
 module.exports = BlogPost;

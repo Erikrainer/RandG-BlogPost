@@ -54,7 +54,6 @@ router.get("/blogpost/:id", async (req,res) => {
         res.status(500).json(error);
     }
 });
-
   
   router.get('/login', (req, res) => {
     if (req.session.logged_in) {

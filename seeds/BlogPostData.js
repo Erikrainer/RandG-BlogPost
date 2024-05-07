@@ -18,6 +18,9 @@ const blogPostData = [
     },
 ]
 
-const seedBlogPost = () => BlogPost.bulkCreate(blogPostData);
+const seedBlogPost = () => BlogPost.bulkCreate(blogPostData,  {
+    individualHooks: true,
+    returning: true,
+  });
 
 module.exports = seedBlogPost;

@@ -51,7 +51,9 @@ header h1 {
     font-size: 200%;
     word-spacing:4rem;
 }
+/* Finish Header Style */
 
+/* Start here Page Style */
 .blogpost-container {
   width: 80%; /* Set the width to cover 80% of the page */
   margin: 20px auto; /* Center the container horizontally and add margin to top and bottom */
@@ -196,4 +198,93 @@ header h1 {
   #logout:hover {
     color: #555; /* Darker color on hover */
   }
+
+  /* Start here DashBoard Style */
+
+  .create-post-form {
+    margin-top: 20px; /* Add margin to separate from posts */
+  }
+  
+  .create-post-form h2 {
+    font-size: 24px; /* Increase font size for form heading */
+    margin-bottom: 10px; /* Add margin below heading */
+  }
+  
+  .create-post-form form {
+    display: flex;
+    flex-direction: column; /* Arrange form elements vertically */
+  }
+  
+  .create-post-form input[type="text"],
+  .create-post-form textarea {
+    margin-bottom: 10px; /* Add margin between form inputs */
+    padding: 10px; /* Add padding to form inputs */
+    font-size: 16px; /* Set font size for form inputs */
+    border: 1px solid #ccc; /* Add border to form inputs */
+    border-radius: 6px; /* Add border radius to form inputs */
+  }
+  
+  .create-post-form textarea {
+    height: 150px; /* Set height for textarea */
+  }
+  
+  .create-post-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-post-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .post {
+    border: 1px solid #ccc; /* Add border around the post */
+    border-radius: 8px; /* Add border radius to soften edges */
+    padding: 20px; /* Add padding inside the post */
+    margin-bottom: 20px; /* Add margin between each post */
+    background-color: #f9f9f9; /* Add background color to the post */
+  }
+  
+  .post-header {
+    margin-bottom: 10px; /* Add margin below header */
+    background-color: var(--background-posts); /* Background color for the header */
+    border-top-left-radius: 5px; /* Adjust top left border radius to match container */
+    border-top-right-radius: 5px; /* Adjust top right border radius to match container */
+    padding: 20px; /* Add padding to the header */
+    margin: -20px -20px 0; /* Remove margin and adjust for padding */
+  }
+  
+  .post-title {
+    font-size: 24px; /* Increase font size for post title */
+    margin-bottom: 5px; /* Add margin below title */
+  }
+  
+  .post-meta {
+    font-size: 14px; /* Decrease font size for meta information */
+    color: #777; /* Adjust color for meta information */
+  }
+  
+  .post-content {
+    margin-bottom: 10px; /* Add margin below post content */
+  }
+  
+  .post-comments {
+    margin-top: 10px; /* Add margin above comment section */
+  }
+  
+  .comment {
+    border-top: 1px solid #ccc; /* Add border between comments */
+    padding-top: 10px; /* Add padding above each comment */
+    margin-top: 10px; /* Add margin between comments */
+    color: #777; /* Adjust comment text color */
+  }
+  
+  
   
