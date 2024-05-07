@@ -13,21 +13,22 @@
   <header>
     <h1>Welcome to the RandG Blog</h1>
     <nav class="navLinks">
-    <a href="/">Home</a>
-    {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-  </nav>
+      <a href="/">Home</a>
+      {{#if logged_in}}
+        <a href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+        <a href="/login">Login</a>
+      {{/if}}
+    </nav>
   </header>
   <main>
     <div class="blog">
       {{{body}}}
     </div>
   </main>
-  {{#if loggedIn}}
-  <script src="/assets/js/logout.js"></script>
+  {{#if logged_in}}
+    <script src="/assets/js/logout.js"></script>
   {{/if}}
 </body>
 

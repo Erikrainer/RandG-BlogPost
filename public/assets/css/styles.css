@@ -51,46 +51,149 @@ header h1 {
     font-size: 200%;
     word-spacing:4rem;
 }
-/* 
-.blogTitle {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    color: var(--main-color);
-    background-color: var(--background-posts);
-    border-bottom: 2px solid black;
-} */
 
-.blogPost {
-    border: 1px solid #ccc; /* Add border around the box */
-    padding: 20px; /* Add padding inside the box */
-    margin-bottom: 20px; /* Add margin between each blog post */
-    border-radius: 5px; /* Add rounded corners */
-    background-color: #f9f9f9; /* Add background color */
+.blogpost-container {
+  width: 80%; /* Set the width to cover 80% of the page */
+  margin: 20px auto; /* Center the container horizontally and add margin to top and bottom */
 }
 
+.blogPost {
+  border: 1px solid #ccc; /* Add border around the box */
+  padding: 20px; /* Add padding inside the box */
+  margin-bottom: 20px; /* Add margin between each blog post */
+  border-radius: 5px; /* Add rounded corners */
+  background-color: #f9f9f9; /* Add background color */
+  width: 100%; /* Make the posts cover 100% of the container width */
+}
+
+.blogTitle {
+  font-size: 20px; /* Adjust the title font size */
+  margin-bottom: 10px; /* Add margin between title and other content */
+}
+
+
 .blogHeader {
-    padding: 10px; /* Add padding to the header */
-    border-bottom: 1px solid #ccc; /* Add border between title and user/date */
-    margin-bottom: 10px; /* Add margin below header */
-    background-color: var(--background-posts); /* Add background color to the header */
-    display: flex; /* Use flexbox for header layout */
-    justify-content: space-between; /* Space out title and user/date */
+  display: flex; /* Use flexbox for header layout */
+  justify-content: space-between; /* Space out title and user/date */
+  background-color: var(--background-posts); /* Background color for the header */
+  border-top-left-radius: 5px; /* Adjust top left border radius to match container */
+  border-top-right-radius: 5px; /* Adjust top right border radius to match container */
+  padding: 20px; /* Add padding to the header */
+  margin: -20px -20px 0; /* Remove margin and adjust for padding */
+}
+
+.blogUser {
+  color: var(--main-color); /* Adjust user info color */
 }
 
 .blogText {
-    margin-top: 10px; /* Add margin above text */
+  line-height: 1.6; /* Adjust line height for better readability */
+  color: #555; /* Darken the text color */
+}
+
+.commentTitle {
+  font-weight: bold; /* Make the comment title bold */
+  margin-top: 20px; /* Add margin above comment title */
 }
 
 .commentSection {
-    margin-top: 10px; /* Add margin above comment section */
+  margin-top: 10px; /* Add margin above comment section */
 }
 
 .comments {
-    border-top: 1px solid #ccc; /* Add border between comments */
-    padding-top: 10px; /* Add padding above each comment */
-    margin-top: 10px; /* Add margin between comments */
-    color: #777; /* Adjust comment text color */
+  border-top: 1px solid #ccc; /* Add border between comments */
+  padding-top: 10px; /* Add padding above each comment */
+  margin-top: 10px; /* Add margin between comments */
+  color: #777; /* Adjust comment text color */
+}
+.blogTitle,
+.blogUser {
+  font-size: 1.5vw;
+    color: var(--main-color); /* Text color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Finish here the homepage */
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    height: 100vh; /* Make the row full height of the viewport */
+    margin-top: 30px; /* Add margin to move cards closer to the top */
+  }
+  
+  .login-card {
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 350px;
+    margin-right: 15px; /* Add some spacing between the cards */
+    
+  }
+  
+  .page-title {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Finish Here the login styles */
+
+  #logout {
+    background-color: transparent;
+    color: var(--main-color); /* Use the same color as navLinks */
+    padding: 0.5rem 1rem; /* Adjust padding */
+    border: none;
+    border-radius: 0; /* Remove border radius */
+    cursor: pointer;
+    font-size: inherit; /* Inherit font size from parent */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color */
+    font-weight: 600;
+    color: var(--main-color);
+    text-shadow: 0px 0px 5px #00BFFF, 0px 0px 10px #00BFFF, 0px 0px 10px #00BFFF,
+      0px 0px 20px #00BFFF;
+  }
+  
+  #logout:hover {
+    color: #555; /* Darker color on hover */
+  }
+  
