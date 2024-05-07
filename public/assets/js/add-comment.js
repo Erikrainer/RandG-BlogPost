@@ -7,8 +7,6 @@ async function addCommentHandler(event) {
 
     // Get the comment text from the form
     const commentText = document.querySelector('.add-comment-form textarea').value;
-    const blogpostId = event.target.dataset.blogpostId;
-
 
     try {
         // Send POST request to create comment
@@ -16,7 +14,6 @@ async function addCommentHandler(event) {
             method: "POST",
             body: JSON.stringify({
                 comment_text: commentText,
-                blogpostId: blogpostId,
             }),
             headers: {
                 'Content-Type': 'application/json'

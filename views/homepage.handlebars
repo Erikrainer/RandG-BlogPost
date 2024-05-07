@@ -33,8 +33,8 @@
         </div>
         <div class="add-comment-form" id="commentForm_{{blogpost.id}}" style="display: none;">
             <form action="/comments/create" method="POST">
-            <input type="hidden" name="blogpostId" value="{{blogpost.id}}">
                 <textarea name="comment_text" placeholder="Your comment"></textarea>
+                <input type="hidden" name="blogpost_id" value="{{blogpost.id}}">
                 <button type="submit">Add Comment</button>
             </form>
         </div>
