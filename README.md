@@ -8,7 +8,7 @@ My task this week is to build a CMS-style blog site similar to a Wordpress site,
 
 ER Diagram:
 
-![RandG-BlogPost](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/10e2fa27-d988-4d46-9db9-943c42afe0e1)
+![RandG-BlogPost ER](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/d7aa8cad-9fc6-438f-8d25-7edc04111aba)
 
 ## Table of Contents 🗒
 
@@ -26,15 +26,40 @@ ER Diagram:
 
 ## Installations  💻
 
-Deployed link: TBD 
+Deployed link: https://randg-blogpost.onrender.com/
 
 To install dependencies, run these commands:
 
-TBD
+Install the dependencies
+```
+npm install
+```
+![Screenshot 2024-05-07 100525](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/a0bc763b-8d26-4331-8af2-1a6e52e16bd6)
+
+![Screenshot 2024-05-07 100549](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/a965b3d8-20d9-4403-9f63-6fd9caceebe9)
+
+![Screenshot 2024-05-07 100557](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/9ecc9433-0ddd-40f2-896f-c22c12d3b19f)
 
 ## Usage 🏆
 
-TBD
+1. First start the database
+```
+\i schema.sql
+```
+
+2.Seed the database
+```
+npm run seed
+```
+
+3.Run
+```
+npm run start
+```
+
+4.You need to create an account to use the Page
+
+![Screenshot 2024-05-07 100536](https://github.com/Erikrainer/RandG-BlogPost/assets/160955635/3ffd3531-aff3-4740-9e3b-f27d604036de)
 
 ## License 📛 
 
@@ -51,7 +76,6 @@ Erikrainer
 ## Tests 🧪
 
 To run tests, run these commands:
-
 
 TBD
 
